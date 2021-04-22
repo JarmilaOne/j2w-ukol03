@@ -12,24 +12,38 @@
     </head>
     <body>
     <div class="seznam">
-        <a href="/detail">
-            <div class="vizitka" th:each="businessCard : ${businessCards}">
+        <div th:each="businessCard, iterStat : ${businessCards}">
+        <a href="/detail" th:href="@{/detail(id=${iterStat.count})}">
+
+            <div class="vizitka">
                 <div class="jmeno" th:text="${businessCard.name}">Dita (Přikrylová) Formánková</div>
                 <div class="firma" th:text="${businessCard.company}">Czechitas z. s.</div>
+
                 <div class="udaje">
+
                     <div class="adresa">
                         <div th:text="${businessCard.street}">Václavské náměstí 837/11</div>
                         <div th:text="${businessCard.postalCodeCity}">11000, Praha 1</div>
                     </div>
 
                     <div class="kontakty">
-                        <div th:text="${businessCard.email}"><i class="las la-at"></i><span>dita@czechitas.cs</span></div>
-                        <div th:text="${businessCard.phoneNumber}"><i class="las la-phone-alt"></i><span>+420 800123456</span></div>
-                        <div th:text="${businessCard.website}"><i class="las la-globe"></i><span>www.czechitas.cz</span></div>
+                        <div th:if="${businessCard.email} != null" th:text="${businessCard.email}"><i class="las la-at"></i><span>dita@czechitas.cs</span></div>
+                        <div th:if="${businessCard.email} == null"></div>
+
+                        <div th:if="${businessCard.phoneNumber} != null" th:text="${businessCard.phoneNumber}"><i class="las la-phone-alt"></i><span>+420 800123456</span></div>
+                        <div th:if="${businessCard.phoneNumber} == null"></div>
+
+                        <div th:if="${businessCard.website} != null" th:text="${businessCard.website}"><i class="las la-globe"></i><span>www.czechitas.cz</span></div>
+                        <div th:if="${businessCard.website} == null"></div>
                     </div>
+
                 </div>
+
             </div>
+
         </a>
+        </div>
+
     </div>
 
     <!--

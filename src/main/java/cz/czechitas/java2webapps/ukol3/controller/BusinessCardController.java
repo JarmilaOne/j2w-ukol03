@@ -31,8 +31,9 @@ public class BusinessCardController {
 
   @GetMapping("/detail")
   public ModelAndView detail(int id) {
+    id = id-1;
     ModelAndView maw = new ModelAndView("detail");
-    maw.addObject("bkDetail", businessCards.get(id));
+    maw.addObject("businessCardD", businessCards.get(id));
     return maw;
   }
 }
