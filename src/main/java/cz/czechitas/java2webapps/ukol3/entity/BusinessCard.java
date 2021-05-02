@@ -5,7 +5,6 @@ public class BusinessCard {
     private String company;
     private String street;
     private String postalCodeCity;
-    private String address;
     private String email;
     private String phoneNumber;
     private String website;
@@ -18,7 +17,6 @@ public class BusinessCard {
         this.company = company;
         this.street = street;
         this.postalCodeCity = postalCodeCity;
-        this.address = street + ", " + postalCodeCity;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.website = website;
@@ -57,7 +55,7 @@ public class BusinessCard {
     }
 
     public String getAddress() {
-        return address;
+        return street + ", " + postalCodeCity;
     }
 
     public String getEmail() {
@@ -91,7 +89,6 @@ public class BusinessCard {
                 ", company='" + company + '\'' +
                 ", street='" + street + '\'' +
                 ", postalCodeCity='" + postalCodeCity + '\'' +
-                ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", website='" + website + '\'' +
