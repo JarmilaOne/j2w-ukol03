@@ -86,3 +86,19 @@ a {
     margin: 1em;
     box-shadow: 5px 5px 10px black;
 }
+
+/*moje CSS*/
+.padding--new-business-card{
+    padding: 30px;
+}
+
+.padding--new-business-card__row{
+    padding: 10px 5px 5px 5px;
+}
+
+.button__sub{
+    padding: 5px 5px 5px 5px;
+    font-size: 15px;
+
+    border-radius: 10px;
+}

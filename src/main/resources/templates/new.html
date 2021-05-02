@@ -12,49 +12,49 @@
 </head>
 
 <body>
+<div class="padding--new-business-card">
+    <h2 class="mt-5 mb-3">Add new business card</h2>
+    <form class="row g-3" th:action="@{/new}" method="post">
+        <div class="col-md-4 padding--new-business-card__row">
+            <label for="newName" class="form-label">Name</label>
+            <input id="newName" name="name" class="form-control" type="text"/>
+        </div>
 
-<h2 class="mt-5 mb-3">Add new business card</h2>
-<form class="row g-3" th:action="@{/new}" method="post">
-    <div class="col-md-4">
-        <label for="newName" class="form-label">Name</label>
-        <input id="newName" name="name" class="form-control" type="text"/>
-    </div>
+        <div class="col-md-5 padding--new-business-card__row">
+            <label for="newCompany" class="form-label">Company</label>
+            <input id="newCompany" name="company" class="form-control" type="text"/>
+        </div>
 
-    <div class="col-md-5">
-        <label for="newCompany" class="form-label">Company</label>
-        <input id="newCompany" name="company" class="form-control" type="text"/>
-    </div>
+        <div class="col-md-2 padding--new-business-card__row">
+            <label for="newStreet" class="form-label">Street</label>
+            <input id="newStreet" name="street" class="form-control" type="text"/>
+        </div>
 
-    <div class="col-md-2">
-        <label for="newStreet" class="form-label">Street</label>
-        <input id="newStreet" name="street" class="form-control" type="date"/>
-    </div>
+        <div class="col-md-2 padding--new-business-card__row">
+            <label for="newPostalCodeCity" class="form-label">Postal Code and City</label>
+            <input id="newPostalCodeCity" name="postalCodeCity" class="form-control" type="text"/>
+        </div>
 
-    <div class="col-md-2">
-        <label for="newPostalCodeCity" class="form-label">Postal Code and City</label>
-        <input id="newPostalCodeCity" name="postalCodeCity" class="form-control" type="date"/>
-    </div>
+        <div class="col-md-2 padding--new-business-card__row">
+            <label for="newEmail" class="form-label">E-mail</label>
+            <input id="newEmail" name="email" class="form-control" type="text"/>
+        </div>
 
-    <div class="col-md-2">
-        <label for="newEmail" class="form-label">E-mail</label>
-        <input id="newEmail" name="email" class="form-control" type="date"/>
-    </div>
+        <div class="col-md-2 padding--new-business-card__row">
+            <label for="newPhoneNumber" class="form-label">Phone Number</label>
+            <input id="newPhoneNumber" name="phoneNumber" class="form-control" type="text"/>
+        </div>
 
-    <div class="col-md-2">
-        <label for="newPhoneNumber" class="form-label">Phone Number</label>
-        <input id="newPhoneNumber" name="phoneNumber" class="form-control" type="date"/>
-    </div>
+        <div class="col-md-2 padding--new-business-card__row">
+            <label for="newWebsite" class="form-label">Website</label>
+            <input id="newWebsite" name="website" class="form-control" type="text"/>
+        </div>
 
-    <div class="col-md-2">
-        <label for="newWebsite" class="form-label">Website</label>
-        <input id="newWebsite" name="website" class="form-control" type="date"/>
-    </div>
-
-    <div class="col-md-1 align-self-end">
-        <button type="submit" class="btn btn-primary"><i class="bi-person-plus-fill" role="img"
-                                                         aria-label="Append"></i></button>
-    </div>
-</form>
+        <div class="col-md-1 align-self-end">
+            <button type="submit" class="btn btn-primary button__sub">Submit</button>
+        </div>
+    </form>
+</div>
 
 </body>
 

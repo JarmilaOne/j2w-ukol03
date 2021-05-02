@@ -40,11 +40,17 @@ public class BusinessCardController {
     return maw;
   }
 
+  //zobraz formular
+  @GetMapping(path = "/new")
+  public String showForm(){
+    return "/new";
+  }
+
+  //pridej vizitku
   @PostMapping(path = "/new", params = {"name", "company", "street", "postalCodeCity", "email", "phoneNumber", "website"})
-  public ModelAndView append(BusinessCard businessCard) {
-    ModelAndView maw = new ModelAndView("new");
+  public String add(BusinessCard businessCard) {
     businessCards.add(businessCard);
-    return maw;
+    return "redirect:/";
   }
 
 }
