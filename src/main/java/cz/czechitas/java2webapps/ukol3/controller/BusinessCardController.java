@@ -41,7 +41,7 @@ public class BusinessCardController {
   }
 
   //zobraz formular
-  @GetMapping(path = "/new")
+  @GetMapping( "/new")
   public String showForm(){
     return "/new";
   }
@@ -50,6 +50,13 @@ public class BusinessCardController {
   @PostMapping(path = "/new", params = {"name", "company", "street", "postalCodeCity", "email", "phoneNumber", "website"})
   public String add(BusinessCard businessCard) {
     businessCards.add(businessCard);
+    return "redirect:/";
+  }
+
+  //smaz vizitku
+  @PostMapping(path = "/delete", params = {"id"})
+  public String delete(int id) {
+    businessCards.remove(id);
     return "redirect:/";
   }
 
